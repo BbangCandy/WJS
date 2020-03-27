@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/*引入图标字体*/
+@font-face {
+  font-family: 'wjs-icon-font';
+  src: url('../font/MiFie-Web-Font.eot');
+  src: url('../font/MiFie-Web-Font.eot?#iefix') format('embedded-opentype'),
+    url('../font/MiFie-Web-Font.woff') format('woff'),
+    url('../font/MiFie-Web-Font.ttf') format('truetype'),
+    url('../font/MiFie-Web-Font.svg#iconfont') format('svg');
+}
+
+[class^='wjs-icon-'] {
+  font-family: "wjs-icon-font";
+}
+
+/* 字体配伪元素使用*/
+.wjs-icon-phone::before {
+  content: '\e908';
+}
+
+.wjs-icon-tel::before {
+  content: '\e909';
+}
+
+.wjs-icon-logo::before {
+  content: '\e920';
+}
+
+.wjs-icon-text::before {
+  content: '\e93e';
+}
+
+/*头部*/
+.wjs-header {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  line-height: 40px;
+
+  .row {
+    [class^="col-md-"]:not(:last-child) {
+      border-right: 1px solid #ccc;
+    }
+
+    a,
+    a:hover {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .btn-register {
+      padding: 2px 10px;
+      color: #fff;
+      font-size: 14px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+/*导航*/
+.wjs-nav {
+  .navbar-default {
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+  .navbar-brand {
+    .wjs-icon-logo {
+      font-size: 50px;
+      color: red;
+      vertical-align: middle;
+      line-height: 50px;
+    }
+
+    .wjs-icon-text {
+      font-size: 30px;
+      color: #000;
+      vertical-align: middle;
+    }
+  }
+
+  .nav {
+    li {
+      a {
+        &:hover, &:focus {
+          border-bottom: 2px solid red;
+        }
+        height: 80px;
+        line-height: 50px;
+      }
+    }
+  }
+}
+/*banner*/ 
+.wjs-banner {
+  .pc-img {
+    height: 410px;
+    background-position: center;
+  }
+}
